@@ -13,7 +13,9 @@ stages {
       // Get some code from a GitHub repository
 
       //git 'https://github.com/raknas999/game-of-life.git'
-      git 'https://github.com/raknas999/GOL-Repo.git'
+     // git 'https://github.com/raknas999/GOL-Repo.git'
+         git 'https://github.com/ArchanaaDevops2022/GOL-Repo.git'
+         
 
       // Get the Maven tool.
      
@@ -71,7 +73,7 @@ post {
             archiveArtifacts 'gameoflife-web/target/*.war'
         }
        failure {
-           mail to:"raknas000@gmail.com", subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "Build failed"
+           mail to:"archanaamt@gmail.com", subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "Build failed"
         }
     }       
 }
